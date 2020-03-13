@@ -18,7 +18,7 @@ phases:
       - echo $AWS_DEFAULT_REGION
       - $(aws ecr get-login --no-include-email --region $AWS_DEFAULT_REGION)
       - echo Amazon ECR login successfull...
-      - REPOSITORY_URI=214472130589.dkr.ecr.us-east-1.amazonaws.com/demo-repo
+      - REPOSITORY_URI=492271735549.dkr.ecr.ap-south-1.amazonaws.com/cms-ecr-demo
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
